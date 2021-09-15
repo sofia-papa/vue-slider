@@ -22,21 +22,22 @@
     <div id="app">
         <div class="wrapper">
             <div class="my_first-img">
-                <i class="fas fa-chevron-circle-left"></i>
+                <i class="fas fa-chevron-circle-left" @click = "previousImage()"></i>
             </div>
 
             <div class="my_centre-image">
+                <img :src="images[imageIndex].source" alt="">
 
             </div>
 
             <div class="my_last-img">
-                <i class="fas fa-chevron-circle-right"></i>
+                <i class="fas fa-chevron-circle-right" @click = "nextImage()"></i>
 
             </div>
         </div>
     </div>
     
-    <script type="text/javascript" src="javascript/script.js">
+    <script type="text/javascript" src="js/myscript.js">
     </script>
 </body>
 </html>
