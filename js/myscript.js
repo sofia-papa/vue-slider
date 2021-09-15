@@ -39,21 +39,24 @@ var app = new Vue(
   },
 
   methods: {
+   
+    previousImage: function(){
+        this.imageIndex --;
+
+        if(this.imageIndex < 0){
+            this.imageIndex = this.images.length - 1;
+        }
+
+    },
+
       nextImage: function(){
           this.imageIndex ++;
 
-          if(this.imageIndex < 0){
-              this.imageIndex = this.imageIndex.length - 1;
-          }
-      },
-
-      previousImage: function(){
-          this.imageIndex --;
-
-          if(this.imageIndex >= this.imageIndex.length){
+          if(this.imageIndex >= this.images.length){
             this.imageIndex = 0;
         }
       },
+
   }
      
 });
