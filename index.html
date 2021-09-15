@@ -26,13 +26,16 @@
             </div>
 
             <div class="my_centre-image">
-                <img :src="images[imageIndex].source" alt="">
+                <img :src="images[imageIndex].source" alt="images[imageIndex].alt">
 
             </div>
 
             <div class="my_last-img">
                 <i class="fas fa-chevron-circle-right" @click = "nextImage()"></i>
-
+            </div>
+            
+            <div class="tennisballs">
+                <i class="fas fa-baseball-ball" :class="(index == imageIndex) ? 'active' : '' " v-for="(image, index) in images"></i>
             </div>
         </div>
     </div>
